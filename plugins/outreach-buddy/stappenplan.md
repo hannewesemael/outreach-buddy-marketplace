@@ -2,7 +2,7 @@
 
 Stap voor stap je eigen UGC/content outreach automatiseren met Claude.
 
-Dit bestand is de bron van waarheid voor de Outreach Buddy skills. Lees het telkens vers in aan het begin van een skill. De onboarding-skill gebruikt Stap 1 t.e.m. 11, de automation-skill Stap 4 en 12 t.e.m. 16, en de maintenance-skill Stap 17.
+Dit bestand is de bron van waarheid voor de Outreach Buddy skills. Lees het telkens vers in aan het begin van een skill. De onboarding-skill gebruikt Stap 1 t.e.m. 11, de automation-skill Stap 4 en 12 t.e.m. 16, en de maintenance-skill Stap 17. Alles verloopt in Claude Code (het Code-tabblad in de Claude desktop app, of claude.ai/code).
 
 ---
 
@@ -10,8 +10,8 @@ Dit bestand is de bron van waarheid voor de Outreach Buddy skills. Lees het telk
 
 Hoe wil je dit doorlopen? Kies wat het beste bij je past:
 
-1. Handmatig, stap voor stap: lees elke stap hieronder, en plak zelf de prompts in je Claude project op het moment dat je eraan toe bent.
-2. Automatisch met Claude: connecteer je Notion met Claude (via je connector-instellingen), creëer een nieuw project, open een nieuwe chat in dat project, en laat Claude je stap voor stap door alle vragen loodsen, inclusief de keuze of je een beginner-standaardantwoord wil gebruiken of liever zelf antwoordt.
+1. Handmatig, stap voor stap: lees elke stap hieronder, en plak zelf de prompts in Claude Code op het moment dat je eraan toe bent.
+2. Automatisch met Claude: open Claude Code, start een sessie in je outreach-map, en typ "outreach buddy onboarding". Claude loodst je dan stap voor stap door alle vragen, inclusief de keuze of je een beginner-standaardantwoord wil gebruiken of liever zelf antwoordt.
 
 ---
 
@@ -37,26 +37,26 @@ Moet je Claude nog installeren, of weet je nog niet goed hoe Claude werkt? Verwi
 1. Ga naar claude.ai of download de Claude desktop app.
 2. Maak een account aan (of log in).
 3. Kies een betalend plan. Dit is nodig omdat:
-   - je Projects nodig hebt (om je documenten en instructies te bewaren)
-   - je de geavanceerde functies nodig hebt (om taken automatisch te laten uitvoeren, tools te koppelen zoals Gmail en Chrome, en taken te plannen)
+   - Claude Code, waar deze plugin in werkt, een betaald plan vereist
+   - je de geavanceerde functies nodig hebt (om tools te koppelen zoals Gmail en Chrome, en taken automatisch te laten uitvoeren en te plannen)
    - de gratis versie deze functies niet (volledig) ondersteunt
 
-Check op claude.ai/pricing welk plan momenteel Projects en deze functies bevat, dit kan wijzigen.
+Check op claude.ai/pricing welk plan momenteel Claude Code en deze functies bevat, dit kan wijzigen.
 
-Je hebt geen aparte modus nodig: in de Claude desktop app kan Claude gewoon vanuit je gesprek documenten opstellen, tools gebruiken (Gmail, Chrome) en taken plannen, zodra je die tools gekoppeld hebt. Voor documenten opstellen en pitches testen (stap 5 t.e.m. 12) heb je enkel een gesprek nodig. Vanaf het moment dat Claude echt iets moet uitvoeren, zoals je Instagram en Gmail connecteren (stap 4) of DM's en mails versturen en dit laten terugkeren als geplande taak (stap 13 t.e.m. 16), gebruikt Claude die koppelingen vanzelf in datzelfde gesprek.
+Je werkt voor alles in Claude Code: het Code-tabblad in de Claude desktop app, of claude.ai/code in je browser. Claude kan daar vanuit je gesprek documenten opstellen en als bestand bewaren, tools gebruiken (Gmail, Chrome) en taken plannen, zodra je die tools gekoppeld hebt. Voor documenten opstellen en pitches testen (stap 5 t.e.m. 12) heb je enkel een gesprek in Claude Code nodig. Vanaf het moment dat Claude echt iets moet uitvoeren, zoals je Instagram en Gmail connecteren (stap 4) of DM's en mails versturen en dit laten terugkeren als geplande taak (stap 13 t.e.m. 16), gebruikt Claude die koppelingen vanzelf in datzelfde gesprek.
 
 ---
 
-## Stap 3 — Maak een project aan
+## Stap 3 — Open Claude Code en kies je outreach-map
 
-Een project is de map waarin al jouw outreach documenten en instructies samenkomen. Claude leest deze bij elke vraag die je in dat project stelt, zodat je nooit opnieuw context moet geven.
+In Claude Code werk je in een map op je computer. Claude bewaart al je outreach-documenten daar als bestanden, en leest ze bij elke sessie opnieuw in, zodat je nooit opnieuw context moet geven. Dat vervangt de klassieke "projecten", je hebt hier geen project nodig.
 
 Actie:
-1. Klik op "Projects" > "Nieuw project".
-2. Geef het een duidelijke naam, bv. "Outreach Buddy".
-3. Vul een korte beschrijving in, bv.: "Automatiseer mijn UGC content outreach op regelmatige basis."
+1. Open Claude Code: klik in de Claude desktop app bovenaan op het "Code"-tabblad, of ga naar claude.ai/code.
+2. Maak op je computer een nieuwe, lege map aan, bijvoorbeeld "Outreach Buddy".
+3. Start een nieuwe sessie (+ New session), kies "Local" (je eigen computer), en selecteer die map.
 
-Alles wat je in de volgende stappen maakt (tone of voice, about me, pitch structuur, follow-up structuur, frequentie) komt in dit project terecht.
+Alles wat je in de volgende stappen maakt (tone of voice, about me, pitch structuur, follow-up structuur, frequentie) bewaart Claude als een bestand in die map.
 
 ---
 
@@ -77,10 +77,10 @@ Geef enkel toegang tot wat nodig is, en controleer af en toe welke connecties no
 
 Dit is het belangrijkste document: het zorgt ervoor dat Claude altijd in jouw stem schrijft, nooit generiek of robotachtig klinkt.
 
-Actie: plak onderstaande prompt in je project en vul de vragen in met jouw eigen antwoorden.
+Actie: plak onderstaande prompt in Claude Code en vul de vragen in met jouw eigen antwoorden.
 
 ```
-Ik wil een tone of voice document maken voor mijn Outreach Buddy project.
+Ik wil een tone of voice document maken voor mijn Outreach Buddy setup.
 Stel me de volgende vragen één voor één, en verwerk mijn antwoorden daarna
 in een duidelijk, herbruikbaar tone of voice document:
 
@@ -100,7 +100,7 @@ kopjes, zodat ik het makkelijk kan hergebruiken en aanvullen.
 Beginner-standaardantwoord (plak dit als antwoord op alle vragen hierboven als de creator beginner is):
 "Mijn toon is fun, vriendelijk en zelfzeker. Ik schrijf in het Nederlands voor Belgische en Nederlandse merken, en in het Engels voor internationale merken. Ik gebruik af en toe een spaarzame emoji, nooit te veel. Ik vermijd clichés zoals 'ik scrollde door jullie socials' en overdreven enthousiaste afsluiters. Mijn vaste openingszin is 'Hii, leuk om digitaal kennis te maken!'. Ik hou mijn berichten kort, met veel witruimte, en gebruik geen liggende streepjes in lopende tekst. Ik voeg altijd mijn Instagram of portfoliolink toe onderaan."
 
-Sla het resulterende document op in je project: klik op het pijltje-omlaag bovenaan het document dat Claude net maakte, en kies "Add to project". Dit gaat niet automatisch, je moet dit zelf even doen zodat Claude het voortaan bij elke vraag in dit project meeleest.
+Claude bewaart dit document automatisch als bestand in je outreach-map (bijvoorbeeld tone-of-voice.md), zodat het elke sessie wordt meegelezen. Vraag gerust om het aan te passen als er iets niet helemaal klopt.
 
 ---
 
@@ -108,10 +108,10 @@ Sla het resulterende document op in je project: klik op het pijltje-omlaag boven
 
 Dit document geeft Claude de feiten om je zelfverzekerd te positioneren in een pitch: wie je bent, wat je ervaring is, én de financiële grenzen waarbinnen Claude namens jou mag bewegen.
 
-Actie: plak onderstaande prompt in je project.
+Actie: plak onderstaande prompt in Claude Code.
 
 ```
-Ik wil een about me/ervaring document maken voor mijn Outreach Buddy project.
+Ik wil een about me/ervaring document maken voor mijn Outreach Buddy setup.
 Stel me de volgende vragen één voor één, en verwerk mijn antwoorden daarna
 in een duidelijk, herbruikbaar document:
 
@@ -141,7 +141,7 @@ onderhandeling en prijsvoorstel.
 Beginner-standaardantwoord:
 "Ik ben [je naam], content creator uit [je stad]. [Voeg hier je persoonlijke context toe, bijvoorbeeld ouderschap of levensstijl, als dat relevant is voor je niche.] Ik ben net gestart met UGC content creation en bouw mijn portfolio nog op. Ik heb momenteel nog geen grote merken of vaste klanten, maar dat is waar ik naartoe werk. Mijn sterktes zijn snelle levering, duidelijke communicatie en creatieve controle, want ik stuur mijn script altijd vooraf door. Ik vraag momenteel €150 voor 1 UGC video, inclusief script, opname, montage en 2 revisies, exclusief usage rights. Ik ben bereid te zakken tot 15 à 20% onder mijn vraagprijs, maar enkel door de scope aan te passen, nooit door zomaar de prijs te laten zakken. Mijn absolute ondergrens is €100 per video, daar ga ik nooit onder. Ik maak voorlopig geen uitzonderingen op mijn tarieven."
 
-Sla het resulterende document op in je project ("Add to project").
+Claude bewaart dit document als bestand in je outreach-map.
 
 ---
 
@@ -149,11 +149,11 @@ Sla het resulterende document op in je project ("Add to project").
 
 Dit document bepaalt wie Claude precies target: welke waarden je belangrijk vindt, en met welk soort merken je wel en niet wil samenwerken. Dit stuurt straks ook de verdeling van je wekelijkse outreach.
 
-Actie: plak onderstaande prompt in je project.
+Actie: plak onderstaande prompt in Claude Code.
 
 ```
 Ik wil een ideale klant en niche document maken voor mijn Outreach Buddy
-project. Stel me de volgende vragen één voor één, en verwerk mijn
+setup. Stel me de volgende vragen één voor één, en verwerk mijn
 antwoorden daarna in een duidelijk, herbruikbaar document:
 
 1. Wat zijn je persoonlijke waarden die je terug wil zien in de merken
@@ -184,9 +184,9 @@ opnieuw te doorlopen.
 Beginner-standaardantwoord:
 "Gezondheid en eerlijkheid zijn belangrijke waarden voor mij, ik werk het liefst met merken die daar oprecht in geloven. Ik wil actief pitchen in de niches gezonde voeding en dranken, fitness en sport, en wellness en health. Mijn verdeling: 50% gezonde voeding en dranken, 30% fitness, sport en gym, 20% wellness en health. Ik focus op merken uit België, Nederland en de rest van BENELUX. Ik werk het liefst met kleine tot middelgrote merken, die voelen vaak persoonlijker en flexibeler aan, maar sta open voor grotere merken als de waarden kloppen. Claude mag zoeken via Instagram en merkwebsites. Ik benader bewust geen merken in fast fashion, alcohol of gokken. Een droommerk is voor mij een merk dat past bij een gezonde levensstijl en waar ik zelf klant van zou zijn. Een rode vlag is een merk zonder actieve social media, of met opvallend veel negatieve reviews."
 
-Wil je tijdelijk of blijvend een andere focus? Typ gewoon in je project: "Vanaf nu deze niches: 100% skincare merken uit Nederland" (of gelijk welke andere niche/regio/merkgrootte) en Claude past de volgende outreach-rondes daarop aan, zonder dat je dit document moet herschrijven.
+Wil je tijdelijk of blijvend een andere focus? Typ gewoon in Claude Code: "Vanaf nu deze niches: 100% skincare merken uit Nederland" (of gelijk welke andere niche/regio/merkgrootte) en Claude past de volgende outreach-rondes daarop aan, zonder dat je dit document moet herschrijven.
 
-Sla het resulterende document op in je project ("Add to project").
+Claude bewaart dit document als bestand in je outreach-map.
 
 ---
 
@@ -194,11 +194,11 @@ Sla het resulterende document op in je project ("Add to project").
 
 Dit document leert Claude hoe te reageren in specifieke, terugkerende situaties, zodat je nooit onder je waarde ingaat en zodat elke samenwerking maximaal benut wordt.
 
-Actie: plak onderstaande prompt in je project.
+Actie: plak onderstaande prompt in Claude Code.
 
 ```
 Ik wil een onderhandelings- en upsell-document maken voor mijn Outreach
-Buddy project. Stel me de volgende vragen één voor één, en verwerk mijn
+Buddy setup. Stel me de volgende vragen één voor één, en verwerk mijn
 antwoorden daarna in een duidelijk, herbruikbaar document met concrete
 voorbeeldzinnen per situatie:
 
@@ -229,7 +229,7 @@ wanneer je het aanbiedt, en een voorbeeldzin om het voor te stellen).
 Beginner-standaardantwoord:
 "Bij een gifted of barter voorstel ga ik hier niet op in als nieuwe klant, tenzij het om een merk gaat waar ik zelf al fan van ben, en dan maximaal één keer om mijn portfolio op te bouwen. Bij een lowball bod bied ik niet meteen tegen met een lagere prijs, maar leg ik uit wat er in mijn tarief zit en pas ik eventueel de scope aan. Onbeperkte usage of advertising rights reken ik altijd apart aan. Extra's buiten de afgesproken scope bied ik aan als aparte, betaalde toevoeging. Als een merk lang stil blijft na een prijsvoorstel, stuur ik na 5 werkdagen een korte, vriendelijke follow-up. Mijn upsell-menu bestaat uit losse foto's uit de opnames, een extra korte video om organisch te posten, een extra hook of CTA, en een bundel extra usage rights met korting. Ik stel een upsell voor net na goedkeuring van de content, als een logisch vervolg."
 
-Sla het resulterende document op in je project ("Add to project").
+Claude bewaart dit document als bestand in je outreach-map.
 
 ---
 
@@ -237,10 +237,10 @@ Sla het resulterende document op in je project ("Add to project").
 
 Dit document legt vast hoe elke pitch is opgebouwd, zodat Claude nooit een generieke mail schrijft, maar elke keer een korte, unieke pitch die aanvoelt als een mini UGC-video: hook, positionering, waarde, sterke CTA.
 
-Actie: plak onderstaande prompt in je project.
+Actie: plak onderstaande prompt in Claude Code.
 
 ```
-Ik wil een pitch structuur document maken voor mijn Outreach Buddy project.
+Ik wil een pitch structuur document maken voor mijn Outreach Buddy setup.
 Stel me de volgende vragen één voor één, en verwerk mijn antwoorden daarna
 in een duidelijk, herbruikbaar document:
 
@@ -273,7 +273,7 @@ Voorbeeld korte pitch:
 
 Voor Instagram DM laat je de onderwerpregel weg en hou je hook en CTA nog korter, meestal 2 tot 3 zinnen.
 
-Sla het resulterende document op in je project ("Add to project").
+Claude bewaart dit document als bestand in je outreach-map.
 
 ---
 
@@ -281,11 +281,11 @@ Sla het resulterende document op in je project ("Add to project").
 
 Een follow-up moet altijd vriendelijk en licht aanvoelen. Dit document zorgt dat elke follow-up kort, warm en zonder druk blijft, maar wel de deur op een kier houdt.
 
-Actie: plak onderstaande prompt in je project.
+Actie: plak onderstaande prompt in Claude Code.
 
 ```
 Ik wil een follow-up structuur document maken voor mijn Outreach Buddy
-project. Stel me de volgende vragen één voor één, en verwerk mijn
+setup. Stel me de volgende vragen één voor één, en verwerk mijn
 antwoorden daarna in een duidelijk, herbruikbaar document:
 
 1. Hoe open je een follow-up bericht? Wil je verwijzen naar je vorige
@@ -311,7 +311,7 @@ Beginner-standaardantwoord:
 Voorbeeld eerste follow-up:
 "Ik breng mijn vorige mailtje nog even naar boven, voor het geval het in de drukte verloren ging. Ik blijf super enthousiast om met [merk] samen te werken op UGC basis, dus laat gerust weten of het iets voor jullie kan zijn!"
 
-Sla het resulterende document op in je project ("Add to project").
+Claude bewaart dit document als bestand in je outreach-map.
 
 ---
 
@@ -321,18 +321,18 @@ Dit document legt de cadans van je outreach vast: wat er wekelijks gebeurt, wat 
 
 Leads tracker (belangrijk): de creator houdt alle merken, statussen en mailadressen bij in een leads tracker in Notion. Er bestaat hiervoor een kant-en-klare template:
 
-Template: Outreach Buddy — Leads Tracker — https://app.notion.com/p/85aaac9cf3f44ee58df696941b231f30
+Template: Outreach Buddy — Leads Tracker — https://app.notion.com/p/85aaac9cf3f44ee58df696941b231f30?v=ef6aca02c40041ef9bfc2face2c46f78&source=copy_link
 
 Actie voor de leads tracker:
 1. Vraag eerst of de creator een Notion-account heeft. Zo niet: bied aan om de andere documenten nu te bouwen en later terug te komen voor de tracker zodra er een gratis Notion-account is.
-2. Zo ja: laat de creator de template hierboven dupliceren naar hun eigen Notion workspace (open de link, klik rechtsboven op "•••" en kies "Duplicate"), of help hen daarbij. Zo werkt iedereen in een eigen kopie en zit niemand in hetzelfde bestand.
-3. Vraag de creator de link van hun eigen kopie, en vervang in onderstaande prompt [plak hier de link naar jouw leads tracker] door die link.
+2. Zo ja: laat de creator de template hierboven zelf dupliceren naar hun eigen Notion workspace. Geef de link, en leg uit: open de link, klik rechtsboven op "Duplicate" (bovenaan de pagina). Zo werkt iedereen in een eigen kopie en zit niemand in hetzelfde bestand. Claude dupliceert de template niet zelf; de creator doet dit, dat is het betrouwbaarst.
+3. Vraag de creator daarna de link van hun eigen kopie, en vervang in onderstaande prompt [plak hier de link naar jouw leads tracker] door die link.
 
 ```
 Mijn leads tracker vind je hier: [plak hier de link naar jouw leads tracker]
 
 Ik wil een frequentie en automatiseringsdocument maken voor mijn Outreach
-Buddy project. Nieuwe outreach-DM's worden altijd automatisch verstuurd,
+Buddy setup. Nieuwe outreach-DM's worden altijd automatisch verstuurd,
 dat hoef je me niet te vragen. Stel me de volgende vragen één voor één,
 en verwerk mijn antwoorden daarna in een duidelijk, herbruikbaar document:
 
@@ -370,7 +370,7 @@ Omdat de link naar de leads tracker zowel in de prompt als in het resulterende d
 Beginner-standaardantwoord:
 "Ik wil wekelijks nieuwe outreach starten via Instagram DM, altijd automatisch verstuurd. Dagelijks wil ik dat mijn DM's opgevolgd worden: als een merk een mailadres deelt, wordt dat mailadres genoteerd in mijn leads tracker en zet dat een eerste pitch-mail als draft klaar. Dagelijks wil ik ook dat mijn inbox bijgehouden wordt en antwoorden als draft klaargezet worden. Ik wil een melding via e-mail zodra deze dagelijkse taak (inbox en DM's) is afgerond. Voor follow-ups wil ik een eerste follow-up na 4 dagen zonder antwoord, een tweede na nog eens 5 dagen, en een derde na nog eens 7 dagen, telkens automatisch verstuurd als er geen reactie kwam. Ik wil dat elke lead in mijn tracker staat, met status, mailadres en aantal verstuurde follow-ups, zodat ik altijd in één oogopslag overzicht heb."
 
-Sla het resulterende document op in je project ("Add to project").
+Claude bewaart dit document als bestand in je outreach-map.
 
 ---
 
@@ -378,11 +378,11 @@ Sla het resulterende document op in je project ("Add to project").
 
 Voor je iets automatiseert, test je eerst één pitch handmatig.
 
-Actie: typ in je project:
+Actie: typ in Claude Code:
 
 ```
 Stuur een DM naar [merknaam], gebaseerd op mijn tone of voice, about
-me en pitch structuur documenten in dit project. Als je een mailadres
+me en pitch structuur documenten in mijn outreach-map. Als je een mailadres
 ontvangt mag je een pitch email in drafts zetten, en zet meteen al een
 draft email klaar naar [dit mailadres].
 ```
@@ -410,7 +410,7 @@ bericht, je hoeft me niet opnieuw te vragen om bevestiging.
 
 Dit is de eerste automatische stap: elke week nieuwe merken aanspreken via DM. Deze DM's worden altijd automatisch verstuurd.
 
-Actie: typ in je project:
+Actie: typ in Claude Code:
 
 ```
 Stel een lijst samen van [X aantal] nieuwe merken om deze week te contacteren via
@@ -429,7 +429,7 @@ voltooid is.
 
 Deze stap verstuurt echt, controleer de eerste paar keren zelf de voorgestelde merkenlijst en DM pitch voor je dit op automatische piloot zet.
 
-Maak hiervan een geplande (scheduled) taak: typ in hetzelfde project, na een geslaagde run, een korte zin met drie dingen erin: wat er moet gebeuren, hoe vaak en wanneer, en welke melding je wil. Je hoeft nergens een knop of menu te zoeken, je beschrijft het gewoon in gewone taal en Claude maakt de terugkerende taak zelf aan. Bijvoorbeeld:
+Maak hiervan een geplande (scheduled) taak: typ in Claude Code, na een geslaagde run, een korte zin met drie dingen erin: wat er moet gebeuren, hoe vaak en wanneer, en welke melding je wil. Je hoeft nergens een knop of menu te zoeken, je beschrijft het gewoon in gewone taal en Claude maakt de terugkerende taak zelf aan. Bijvoorbeeld:
 
 ```
 Maak van deze outreach-taak een terugkerende (scheduled) task.
@@ -442,13 +442,13 @@ status "DM verstuurd", en stuur me daarna een bevestiging via push en
 e-mail zodra de taak klaar is.
 ```
 
-Een geplande taak draait zelfstandig op de achtergrond, ook als je de chat niet open hebt. Je kiest zelf het tijdstip en de herhaling, en je kan een melding laten sturen (push en/of e-mail) zodra de taak klaar is. Je kan ze op elk moment aanpassen of stopzetten door in je project te typen: "Verander deze geplande taak naar [nieuw tijdstip]" of "Zet deze geplande taak stop". Wil je een overzicht? Typ "Welke terugkerende taken heb ik?".
+Een geplande taak draait zelfstandig op de achtergrond, ook als je de chat niet open hebt. Je kiest zelf het tijdstip en de herhaling, en je kan een melding laten sturen (push en/of e-mail) zodra de taak klaar is. Je kan ze op elk moment aanpassen of stopzetten door in Claude Code te typen: "Verander deze geplande taak naar [nieuw tijdstip]" of "Zet deze geplande taak stop". Wil je een overzicht? Typ "Welke terugkerende taken heb ik?".
 
 ---
 
 ## Stap 14 — Dagelijkse cyclus: DM opvolging + pitch-mails klaarzetten
 
-Actie: typ in je project:
+Actie: typ in Claude Code:
 
 ```
 Check mijn Instagram DM's van vandaag. Volg lopende gesprekken op volgens
@@ -468,7 +468,7 @@ Je kan deze prompt combineren met stap 15 (inbox beheer) in één dagelijkse gep
 
 ## Stap 15 — Dagelijkse cyclus: inbox beheer + reply drafts
 
-Actie: typ in je project:
+Actie: typ in Claude Code:
 
 ```
 Check mijn e-mail inbox van vandaag op reacties van merken. Zet voor elke
@@ -491,7 +491,7 @@ frequentie en automatiseringsdocument) zodra alles klaarstaat.
 
 ## Stap 16 — Automatische follow-ups
 
-Actie: typ in je project:
+Actie: typ in Claude Code:
 
 ```
 Ga na welke pitches of voorstellen nog geen antwoord kregen, op basis van
